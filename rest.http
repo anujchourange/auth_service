@@ -1,0 +1,34 @@
+########### Desc: Get User data ##################
+########### @param Authorization header with bearer token  ###
+########### @private
+########### Response email, username, and fullName ##
+GET http://localhost:8000/profile
+Authorization: Bearer <Your Access Token Goes here >
+Content-Type: application/json
+
+
+#################################################
+######## @desc register user  ###########
+######## @param username , fullName, email , and password
+
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+    "username":"test1234",
+    "fullName":"Anuj C",
+    "email":"anuj@testgmail.dev",    
+    "password":"verysecret"
+}
+
+#################################################
+######## @desc login user  ###########
+######## @param username , password 
+######## @response accessToken 
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "username":"test1234",
+    "password":"verysecret"
+}
