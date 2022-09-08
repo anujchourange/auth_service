@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/auth", AuthRoute);
-app.use("/", UserRoute);
+app.use("/user", UserRoute);
 app.use(async (req, res, next) => {
   next(createError.NotFound("This route does not exist"));
 });
